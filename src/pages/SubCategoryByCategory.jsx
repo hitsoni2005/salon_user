@@ -33,16 +33,20 @@ function SubCategoriesSec() {
     let [error, SetError] = useState("")
 
     let id = useLocation().pathname.split("/")[2];
-
+    console.log("URL ID:", id);
 
     async function FetchCategories() {
         try {
             SetLoading(true)
-            let res = await axios.get(`${BASE_URL}/api/subcategories?category_id=${id}`)
+            let res = await axios.get(`${BASE_URL}/api/subcategories/${id}`)
             console.log(res.data)
-            SetCategories(res.data.categories);
+            SetCategories(res.data.subCategoryByCategory);
         } catch (e) {
-            SetError(e)
+            console.log(e.response?.data);
+            SetError(
+                e.response?.data?.message ||
+                e.message
+            );
         } finally {
             setTimeout(() => {
                 SetLoading(false);
@@ -79,7 +83,7 @@ function SubCategoriesSec() {
                                                 <>
                                                     <div className="col-sm-6 col-md-4">
                                                         <div className="gallery-item wow fadeIn">
-                                                            <Link to={`/ServiceByCategory/${value._id}`} className="venobox" data-gall="gallery">
+                                                            <Link to={`/ServiceByCategory/${value.category_id}`} className="venobox" data-gall="gallery">
                                                                 <img src={value.subcategory_image ? `${BASE_URL}${value.subcategory_image}` : "/img/serviceImage.jpg"} alt="" />
                                                                 <div className="gallery-caption text-center">
                                                                     <i className="fa fa-heart-o" />

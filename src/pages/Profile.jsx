@@ -7,6 +7,7 @@ import axios from 'axios'
 import CheckToken from '../utils/CheckToken'
 import Logout from '../utils/Logout'
 import BASE_URL from '../config'
+import { Link } from 'react-router-dom'
 
 function Profile() {
     return (
@@ -151,6 +152,30 @@ function UserProfileForm() {
                                             value="Update Profile"
                                             className="btn btn-primary"
                                         />
+                                    </div>
+
+                                    <hr className="my-4" />
+
+                                    <div className="row">
+
+                                        <div className="col-md-6 mb-3">
+                                            <Link
+                                                to={`/mybookings/${user._id}`}
+                                                className="btn btn-outline-primary btn-block"
+                                            >
+                                                📅 My Bookings
+                                            </Link>
+                                        </div>
+
+                                        <div className="col-md-6 mb-3">
+                                            <Link
+                                                to={`/myinquiries/${user._id}`}
+                                                className="btn btn-outline-secondary btn-block"
+                                            >
+                                                ❓ My Inquiries
+                                            </Link>
+                                        </div>
+
                                     </div>
 
                                 </form>

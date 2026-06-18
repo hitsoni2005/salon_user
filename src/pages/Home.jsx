@@ -47,7 +47,7 @@ function HomeBanner() {
                                             <h6 className="animated fadeInDown">Consetetur Adipiscing</h6>
                                             <h1 className="animated fadeInUp">Soft &amp; Pure Spa Salon</h1>
                                             <p className="animated fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt ullamcorper magna, in tincidunt ex auctor et.</p>
-                                            <a href="contact-us.html" className="btn btn-primary animated fadeInUp">Contact Us</a>
+                                            <Link to="/Contactus" className="btn btn-primary animated fadeInUp">Contact Us</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -63,7 +63,7 @@ function HomeBanner() {
                                             <h6 className="animated fadeInLeft">Consetetur Adipiscing</h6>
                                             <h1 className="animated fadeInLeft">Soft &amp; Pure Spa Salon</h1>
                                             <p className="animated fadeInLeft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt ullamcorper magna, in tincidunt ex auctor et.</p>
-                                            <a href="contact-us.html" className="btn btn-primary animated fadeInLeft">Contact Us</a>
+                                            <Link to="/Contactus" className="btn btn-primary animated fadeInLeft">Contact Us</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -79,7 +79,7 @@ function HomeBanner() {
                                             <h6 className="animated fadeInRight">Consetetur Adipiscing</h6>
                                             <h1 className="animated fadeInRight">Soft &amp; Pure Spa Salon</h1>
                                             <p className="animated fadeInRight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt ullamcorper magna, in tincidunt ex auctor et.</p>
-                                            <a href="contact-us.html" className="btn btn-primary animated fadeInRight">Contact Us</a>
+                                            <Link to="/Contactus" className="btn btn-primary animated fadeInRight">Contact Us</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -148,7 +148,7 @@ function HomeServices() {
                                                     <div className="col-md-4" key={index}>
                                                         <div className="service-item wow fadeIn">
                                                             <div className="thumb">
-                                                                <a href="service-single.html"><img src={value.service_image ? `${BASE_URL}${value.service_image}` : "/img/serviceImage.jpg"} alt /></a>
+                                                                <Link to={`/ServiceDetails/${value._id}`}><img src={value.service_image ? `${BASE_URL}${value.service_image}` : "/img/serviceImage.jpg"} alt /></Link>
                                                             </div>
                                                             <div className="service-info text-center">
                                                                 <h3><Link to={`/ServiceDetails/${value._id}`}>{value.service_name}</Link></h3>
@@ -168,7 +168,7 @@ function HomeServices() {
                     </div>
                     <div className="row">
                         <div className="col-md-12 text-center">
-                            <a href="services.html" className="btn btn-primary">All Services</a>
+                            <Link to="/Services" className="btn btn-primary">All Services</Link>
                         </div>
                     </div>
                 </div>
@@ -242,7 +242,7 @@ function HomePricing() {
                                         <li>Manicure</li>
                                     </ul>
                                     <h2><sub>$</sub>29.00</h2>
-                                    <a href="contact-us.html" className="btn btn-default">Contact Us</a>
+                                    <Link to="/Contactus" className="btn btn-default">Contact Us</Link>
                                 </div>
                             </div>
                         </div>
@@ -261,7 +261,7 @@ function HomePricing() {
                                         <li>Manicure</li>
                                     </ul>
                                     <h2><sub>$</sub>39.00</h2>
-                                    <a href="contact-us.html" className="btn btn-default">Contact Us</a>
+                                    <Link to="/Contactus" className="btn btn-default">Contact Us</Link>
                                 </div>
                             </div>
                         </div>
@@ -280,7 +280,7 @@ function HomePricing() {
                                         <li>Manicure</li>
                                     </ul>
                                     <h2><sub>$</sub>49.00</h2>
-                                    <a href="contact-us.html" className="btn btn-default">Contact Us</a>
+                                    <Link to="/Contactus" className="btn btn-default">Contact Us</Link>
                                 </div>
                             </div>
                         </div>

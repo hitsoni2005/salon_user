@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function Breadcrumbs(props) {
     return (
         <div>
-            <section className="inner-page-banner" style={{ backgroundImage: 'url(img/banner/about-banner.jpg)' }}>
+            <section className="inner-page-banner" style={{ backgroundImage: 'url(/img/banner/about-banner.jpg)' }}>
                 <div className="page-banner-caption">
                     <div className="container">
                         <div className="row">

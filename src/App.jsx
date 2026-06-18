@@ -10,6 +10,8 @@ import SubCategoryByCategory from "./pages/SubCategoryByCategory"
 import ServiceByCategory from "./pages/ServiceByCategory"
 import ServiceDetails from "./pages/ServiceDetails"
 import Profile from "./pages/Profile"
+import MyBookings from "./pages/MyBookings"
+import MyInquiries from "./pages/MyInquiries"
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
           <Route path="/ServiceByCategory/:id" element={<ServiceByCategory />} />
           <Route path="/ServiceDetails/:id" element={<ServiceDetails />} />
           <Route path="/Profile" element={<Profile />} />
+          <Route path="/mybookings/:user_id" element={<MyBookings />} />
+          <Route path="/myinquiries/:user_id" element={<MyInquiries />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -10,9 +10,7 @@ import BASE_URL from '../config'
 function ServiceByCategory() {
     return (
         <div>
-            <Header />
             <ServicesContent />
-            <Footer />
         </div>
     )
 }
@@ -20,9 +18,11 @@ function ServiceByCategory() {
 function ServicesContent() {
     return (
         <>
+            <Header />
             <Breadcrumbs title="Services" />
             <ServiceCard />
             <Appointment />
+            <Footer />
         </>
     )
 }
@@ -36,9 +36,9 @@ function ServiceCard() {
     async function FetchServices() {
         try {
             SetLoading(true);
-            let res = await axios.get(`${BASE_URL}/api/servicesbycategory?category_id=${id}`)
+            let res = await axios.get(`${BASE_URL}/api/servicesbycategory/${id}`)
             console.log(res.data)
-            SetServices(res.data.data)
+            SetServices(res.data.servicesByCategory)
         } catch (e) {
             SetError(e)
         } finally {

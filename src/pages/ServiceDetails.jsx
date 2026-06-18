@@ -176,7 +176,7 @@ function ServiceDetailsCard() {
                                         <div className="service-details">
                                             <h3>Duration: {ServiceDetails.duration_mins}<br />Rs. {ServiceDetails.price}</h3>
                                             <p>Category: {ServiceDetails.category_name}</p>
-                                            <p>SubCategory: {ServiceDetails.subcategory_name}</p>
+                                            <p>Status: {ServiceDetails.status}</p>
                                             <p>{ServiceDetails.service_description}</p>
                                         </div>
                                     </div>
